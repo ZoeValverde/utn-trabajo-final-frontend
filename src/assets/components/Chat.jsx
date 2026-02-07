@@ -1,6 +1,6 @@
 const Chat = () => {
     return (
-        <section>
+        <section className="panel-chat">
             <h1>chats</h1>
         </section>
     )

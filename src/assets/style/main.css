@@ -13,6 +13,25 @@ aside{
     width: 260px;
 }
 
-section{
+.panel-chat{
     flex: 1;
 }
+
+/* Chat Section*/
+
+.chats-section{
+display: flex;
+flex-direction: column;
+}
+
+.chats-section button{
+display: flex;
+margin-top: 10px;
+background: transparent;
+border: none;
+}
+
+.chat{
+    display: block;
+}
+
