@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+}
+
+aside{
+    width: 260px;
+}
+
+section{
+    flex: 1;
+}
