@@ -60,13 +60,33 @@ border: none;
 
 
 .chat-body{
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    background-color: aquamarine;
     font-size: 20px;
     overflow-y: auto;
+    scrollbar-width: 100%;
 }
 
+.message{
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    border-radius: 5px;
+}
+
+
+
 .chat-input{
+display: flex;
 padding: 12px;
     
+}
+.chat-input input{
+    padding: 15px;
+    flex: 1;
+    border-radius: 10px;
+    margin-right: 8px ;
+    font-size: 15px;
 }

@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { messages as mockMessages } from "../services/mockApi.js";
 
 const Chat = () => {
     const [messages, setMessages] = useState(mockMessages);
-    const [text, setText]= useState("")
+  const [text, setText] = useState("")
+  
+  const chatBodyRef= useRef(null)
     
     const handleChangeText = (event) => {
         setText(event.target.value)
   }
   
   const handleKeyDown = (event) => {
-    if(event.key==="Enter"){sendMessage()}
+    
+    if (event.key === "Enter") { sendMessage() }
+  
 }
-
 
     const sendMessage = () => {
         const currentTime= new Date()
@@ -27,13 +30,16 @@ const Chat = () => {
         setText("")
     }
 
+  useEffect(() => {
+    if(chatBodyRef.current){chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight}
+  },[messages])
   return (
     <section className="panel-chat">
       <header>
         <h2>Karina</h2>
         <p>Online</p>
       </header>
-      <div className="chat-body">
+      <div className="chat-body" ref={chatBodyRef}>
         {messages.map((message) => (
           <div key={message.id}
             className={`message ${message.author === "me" ? "me" : "recieved"}`}>
