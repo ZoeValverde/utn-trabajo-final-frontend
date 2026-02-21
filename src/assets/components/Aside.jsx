@@ -10,21 +10,20 @@ const Aside = () => {
 
     const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(search.toLowerCase()))
 
-
     return (
         <aside>
             <h1>Aside</h1>
-            <input type="search" placeholder="Buscar contactos" onChange={handleChange}/>
+            <input type="search" placeholder="Buscar contactos" onChange={handleChange} />
             <section className="chats-section">
                 {
+                    filteredUsers.length===0? <p>no hay contactos</p>: 
                     filteredUsers.map((user) => (
-                        <div className="chat" key={user.name}>
+                        <div className="chat" key={user.id}>
                             <button>{user.name}</button>
                             <small>{user.status}</small>
                         </div>
                     ))
                 }
-
             </section>
         </aside>
     )
