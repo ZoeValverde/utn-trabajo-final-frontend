@@ -1,3 +1,5 @@
+/* GENERALES*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,27 +13,60 @@
 
 aside{
     width: 260px;
+    height: 100vh;
 }
 
 .panel-chat{
     flex: 1;
 }
 
-/* Chat Section*/
-
-.chats-section{
-display: flex;
-flex-direction: column;
+aside h1{
+margin-left: 10px;
 }
 
+aside input{
+ padding: 5px 20px;
+ border-radius: 10px;
+}
+
+/* Contacts Section*/
+
 .chats-section button{
-display: flex;
 margin-top: 10px;
+width: 100%;
+text-align: left;
 background: transparent;
 border: none;
 }
 
-.chat{
-    display: block;
+/* Chat contact section*/
+.panel-chat{
+    display: flex;
+    flex-direction: column;
 }
 
+.panel-chat header{
+    padding: 20px;
+}
+
+.chat{
+    display: flex;
+    flex-direction: column;
+}
+
+.chat:hover, .chat:focus{
+    background-color: aqua;
+}
+
+
+.chat-body{
+    flex: 1;
+    background-color: aquamarine;
+    font-size: 20px;
+    overflow-y: auto;
+}
+
+.chat-input{
+padding: 12px;
+    
+}

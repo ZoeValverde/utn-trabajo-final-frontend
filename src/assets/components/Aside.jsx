@@ -18,10 +18,10 @@ const Aside = () => {
                 {
                     filteredUsers.length===0? <p>no hay contactos</p>: 
                     filteredUsers.map((user) => (
-                        <div className="chat" key={user.id}>
-                            <button>{user.name}</button>
-                            <small>{user.status}</small>
-                        </div>
+                        <button className="chat" key={user.id}>
+                            <h3>{user.name}</h3>
+                            <h3>{user.status}</h3>
+                        </button>
                     ))
                 }
             </section>
