@@ -42,9 +42,9 @@ const Chat = () => {
       <div className="chat-body" ref={chatBodyRef}>
         {messages.map((message) => (
           <div key={message.id}
-            className={`message ${message.author === "me" ? "me" : "recieved"}`}>
+            className={`message ${message.author === "Me" ? "me" : "recieved"}`}>
             <p>
-              <b>{message.author}</b>:{message.text}
+              {message.text}
             </p>
             <p className="timestamp">{message.time}</p>
           </div>

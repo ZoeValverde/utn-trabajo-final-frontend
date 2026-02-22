@@ -4,6 +4,10 @@ import { users } from "../services/mockApi.js"
 const Aside = () => {
     const [search, setSearch] = useState("")
 
+    const handleClick = (id) => {
+        console.log(id)
+    }
+
     const handleChange = (event) => {
         setSearch(event.target.value)
     }
@@ -18,7 +22,7 @@ const Aside = () => {
                 {
                     filteredUsers.length===0? <p>no hay contactos</p>: 
                     filteredUsers.map((user) => (
-                        <button className="chat" key={user.id}>
+                        <button className="chat" key={user.id} onClick={()=>{handleClick(user.id)}}>
                             <h3>{user.name}</h3>
                             <h3>{user.status}</h3>
                         </button>
